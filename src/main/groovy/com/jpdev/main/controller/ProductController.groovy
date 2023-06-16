@@ -25,7 +25,7 @@ class ProductController {
     }
 
     @RequestMapping(value = '/{id}', method = RequestMethod.GET)
-    Product getProduct(@PathVariable('id') int id) {
+    Product getProduct(@PathVariable('id') String id) {
         return productService.get(id)
     }
 

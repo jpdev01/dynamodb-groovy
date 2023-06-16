@@ -16,7 +16,7 @@ class ProductServiceImpl implements ProductService {
         return repository.findAll()
     }
 
-    public Product get(Long id) {
+    public Product get(String id) {
         Optional<Product> holder = repository.findById(id)
         if (holder.isPresent()) return holder.get()
         return null
